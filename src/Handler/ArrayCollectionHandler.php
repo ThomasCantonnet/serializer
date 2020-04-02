@@ -78,7 +78,7 @@ final class ArrayCollectionHandler implements SubscribingHandlerInterface
                 return $visitor->visitArray([], $type, $context);
             }
         }
-        $result = $visitor->visitArray($collection->toArray(), $type);
+        $result = $visitor->visitArray($collection->getValues(), $type);
 
         $context->startVisiting($collection);
         return $result;
